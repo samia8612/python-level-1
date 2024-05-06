@@ -1,0 +1,12 @@
+print("please choose the options as below:")
+
+#output to user
+conversionChoice = input("1) M to KM\n2)kM to M\n  ( your option )")
+
+#if user chooses lb to kg:
+if(conversionChoice == "1"):
+    Kilometer= int(input("How many M do you want to convert?\n (your number)" ))
+    print("The answer ",Kilometer/1000, "km")
+else:
+    Meter= int(input("How many kM do you want to convert?\n (your number)"))
+    print("The answer ", Meter*100, "M")

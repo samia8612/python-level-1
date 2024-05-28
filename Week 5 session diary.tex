@@ -1,0 +1,43 @@
+
+def add_entries():
+  date = input("Enter the date for the diary entry (DD-MM-YY) or leave blank to use today is date")
+  if date =="" :
+    date = datetime.date.today().strftime("%dd.%mm.%yy")
+  entry = input("Entry the diary entry you want to enter:")
+  with open("diary.tex", "a") as file:
+    file.write(f"{entry})-{date}")
+  print ("Diary entry was written successfully") 
+  
+def view_entries():
+  try:
+    with open("diary.tex", "r")as file:
+      entries = file.readlines()
+      if entries:
+        for entry in entries:
+          print(entry.strip())
+      else:
+          print ("no diary entries were find!")
+  except FileNotFoundError:
+    print("No diary entries were found!")
+  
+  
+while True:
+  print("\nMenu:")
+  print("1 .Add a new diary entry")
+  print("2 .Veiw excisting  diary entries")
+  print("3 .Quit")
+  
+  choice = input("please choose the option that you want:")
+  if choice == "1":
+    add_entries()
+    
+  elif choice == "2":
+    view_entries() 
+    
+  elif choice == "3" :
+    print ("you have chosen to quit , Good bye")
+    break
+  else:
+    print("you have chosen a wrong number. Try again! ")
+    
+    

@@ -27,12 +27,7 @@ while True:
      
    
     
-    
-  
-   # weight = 54.343
-   # weight_rounded = round(weight, 2)
-   # print(weight_rounded)
-  
+
     
   elif action =="4":
       print ("exit program, Goodbye")
